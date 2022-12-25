@@ -80,7 +80,7 @@ app.get("/", (req, res) => {
 	res.sendFile(process.cwd() + "/views/index.html");
 });
 
-app.get("/:short", redirect);
+app.get("/api/shorturl/:short", redirect);
 app.get("/api/shorturl", getAllLinks);
 app.post("/api/shorturl", shortenLink);
 
